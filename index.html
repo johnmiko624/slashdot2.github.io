@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slashdot Replica</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container {
+            width: 98%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #e9ffff;
+            padding: 10px;
+            text-align: left;
+            color: white;
+            border-bottom: 4px solid #005050;
+        }
+        header img {
+            vertical-align: middle;
+            margin-right: 15px;
+            height: 50px;
+        }
+        header nav {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 15px;
+            border-right: 1px solid #cccccc;
+        }
+        .main-content h2 {
+            color: #006666;
+            margin-bottom: 10px;
+        }
+        .main-content table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .main-content table th, .main-content table td {
+            padding: 10px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .main-content table th {
+            background-color: #006666;
+            color: white;
+            text-align: left;
+        }
+        .article-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .article-image {
+            margin-left: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .article-image img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .sidebar-left, .sidebar-right {
+            width: 200px;
+            padding: 15px;
+        }
+        .sidebar-left {
+            border-right: 1px solid #cccccc;
+        }
+        .sidebar-right {
+            border-left: 1px solid #cccccc;
+        }
+        .sidebar-left ul, .sidebar-right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-left ul li, .sidebar-right ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar-left ul li a, .sidebar-right ul li a {
+            text-decoration: none;
+            color: #006666;
+        }
+        .sidebar-left ul li a:hover, .sidebar-right ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #006666;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 11px;
+        }
+        .search-bar {
+            margin-bottom: 15px;
+        }
+        .search-bar input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        form input {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.jpg" alt="Slashdot Logo">
+            <nav>
+                <!-- Add navigation items if needed -->
+            </nav>
+        </header>
+        <div class="content">
+            <div class="sidebar-left">
+                <h3>Today's Headlines</h3>
+                <ul>
+                    <li><a href="https://www.techcrunch.com/article1" target="_blank">Exploring the Future of AI</a></li>
+                    <li><a href="https://www.theverge.com/article2" target="_blank">The Rise of Quantum Computing</a></li>
+                    <li><a href="https://www.wired.com/article3" target="_blank">Understanding Blockchain Technology</a></li>
+                    <li><a href="https://www.bbc.com/article4" target="_blank">Innovations in Renewable Energy</a></li>
+                    <li><a href="https://www.scientificamerican.com/article5" target="_blank">The Future of Space Exploration</a></li>
+                </ul>
+                <h3>Recent Comments</h3>
+                <ul>
+                    <li><a href="#" target="_blank">User1: Great insights on AI!</a></li>
+                    <li><a href="#" target="_blank">User2: I love quantum computing!</a></li>
+                    <li><a href="#" target="_blank">User3: Renewable energy is the future!</a></li>
+                </ul>
+                <h3>Trending Articles</h3>
+                <ul>
+                    <li><a href="https://www.techcrunch.com/article1" target="_blank">Exploring the Future of AI</a></li>
+                    <li><a href="https://www.theverge.com/article2" target="_blank">The Rise of Quantum Computing</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Latest News</h2>
+                <table>
+                    <tr>
+                        <th>News Article 1</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Reporter | <strong>Date:</strong> Sep 22, 2024 12:00 PM
+                                    <p><a href="https://www.techcrunch.com/article1" target="_blank">Exploring the Future of AI</a> - This article delves into the advancements in artificial intelligence and its potential impact on various industries.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic1.jpg" alt="AI Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 2</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Editor | <strong>Date:</strong> Sep 21, 2024 10:30 AM
+                                    <p><a href="https://www.theverge.com/article2" target="_blank">The Rise of Quantum Computing</a> - An exploration of quantum computing technology and its future implications for computational power.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic2.jpg" alt="Quantum Computing Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 3</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Tech Guru | <strong>Date:</strong> Sep 20, 2024 09:00 AM
+                                    <p><a href="https://www.wired.com/article3" target="_blank">Understanding Blockchain Technology</a> - A comprehensive look at blockchain technology and its transformative potential across different sectors.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic3.jpg" alt="Blockchain Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 4</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Analyst | <strong>Date:</strong> Sep 19, 2024 03:45 PM
+                                    <p><a href="https://www.bbc.com/article4" target="_blank">Innovations in Renewable Energy</a> - This article discusses the latest innovations in renewable energy technologies and their impact on sustainability.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic4.jpg" alt="Renewable Energy Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 5</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Contributor | <strong>Date:</strong> Sep 18, 2024 02:15 PM
+                                    <p><a href="https://www.scientificamerican.com/article5" target="_blank">The Future of Space Exploration</a> - A look at the future of space exploration and the missions planned for the coming decades.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic5.jpg" alt="Space Exploration Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 6</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Writer | <strong>Date:</strong> Sep 17, 2024 01:00 PM
+                                    <p><a href="https://www.engadget.com/article6" target="_blank">Cybersecurity in 2024</a> - An overview of the cybersecurity landscape in 2024 and the emerging threats.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic6.jpg" alt="Cybersecurity Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 7</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Journalist | <strong>Date:</strong> Sep 16, 2024 11:30 AM
+                                    <p><a href="https://www.forbes.com/article7" target="_blank">Blockchain in Finance: A Revolution</a> - Exploring how blockchain is changing the finance sector.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic7.jpg" alt="Blockchain in Finance Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>News Article 8</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="article-content">
+                                <div>
+                                    <strong>Posted by:</strong> Tech Writer | <strong>Date:</strong> Sep 15, 2024 04:20 PM
+                                    <p><a href="https://www.techradar.com/article8" target="_blank">AI's Impact on Daily Life</a> - This article discusses how AI is becoming integrated into our daily lives.</p>
+                                </div>
+                                <div class="article-image">
+                                    <img src="pic8.jpg" alt="AI in Daily Life Image">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sidebar-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <h3>Linked Articles</h3>
+                <ul>
+                    <li><a href="https://www.scientificamerican.com/article5" target="_blank">The Future of Space Exploration</a></li>
+                    <li><a href="https://www.engadget.com/article6" target="_blank">Cybersecurity in 2024</a></li>
+                    <li><a href="https://www.forbes.com/article7" target="_blank">Blockchain in Finance: A Revolution</a></li>
+                    <li><a href="https://www.techradar.com/article8" target="_blank">AI's Impact on Daily Life</a></li>
+                </ul>
+                <h3>Top Users</h3>
+                <ul>
+                    <li>UserA - 1500 points</li>
+                    <li>UserB - 1200 points</li>
+                    <li>UserC - 1100 points</li>
+                </ul>
+                <h3>User Login/Register</h3>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Slashdot Replica. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
